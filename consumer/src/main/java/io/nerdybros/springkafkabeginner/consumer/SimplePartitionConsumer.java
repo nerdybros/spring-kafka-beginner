@@ -11,23 +11,23 @@ import org.springframework.stereotype.Component;
 @Component
 public class SimplePartitionConsumer {
 
-    private final String groupId = "test-group6";
+	private final String groupId = "test-group6";
 
-    @KafkaListener(containerFactory = "simpleListenerContainerFactory", groupId = groupId,
-        topicPartitions = @TopicPartition(topic = "sample-topic-mp",
-                partitionOffsets = @PartitionOffset(partition = "0", initialOffset = "0"))
-    )
-    public void listen(@Payload String message, @Header(KafkaHeaders.RECEIVED_PARTITION_ID) int partition) {
-        System.out.println("partition " + partition + " consumer : " + message);
-        // handle business
-    }
+	@KafkaListener(containerFactory = "simpleListenerContainerFactory", groupId = groupId,
+			topicPartitions = @TopicPartition(topic = "test-topic-mp", partitionOffsets = @PartitionOffset(partition = "0", initialOffset = "0")))
+	public void listen(@Payload String message,
+			@Header(KafkaHeaders.RECEIVED_PARTITION_ID) int partition,
+			@Header(KafkaHeaders.RECEIVED_MESSAGE_KEY) String messageKey) {
+		System.out.println("groupId: test-group6, key : "+ messageKey +", partition-" + partition + "-consumer,\r\n" + message);
+		// handle business
+	}
 
-    @KafkaListener(containerFactory = "simpleListenerContainerFactory", groupId = groupId,
-            topicPartitions = @TopicPartition(topic = "sample-topic-mp",
-                    partitions = {"1", "2"})
-    )
-    public void listen2(@Payload String message, @Header(KafkaHeaders.RECEIVED_PARTITION_ID) int partition) {
-        System.out.println("partition " + partition + " consumer : " + message);
-        // handle business
-    }
+	@KafkaListener(containerFactory = "simpleListenerContainerFactory", groupId = groupId,
+			topicPartitions = @TopicPartition(topic = "test-topic-mp", partitions = { "1", "2" }))
+	public void listen2(@Payload String message,
+			@Header(KafkaHeaders.RECEIVED_PARTITION_ID) int partition,
+			@Header(KafkaHeaders.RECEIVED_MESSAGE_KEY) String messageKey) {
+		System.out.println("groupId: test-group6, key : "+ messageKey +", partition-" + partition + "-consumer,\r\n" + message);
+		// handle business
+	}
 }

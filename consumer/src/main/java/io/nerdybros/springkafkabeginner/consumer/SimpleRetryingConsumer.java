@@ -20,7 +20,7 @@ public class SimpleRetryingConsumer {
 
     @KafkaListener(topics = { "test-topic-retry" }, containerFactory = "simpleRetryingListenerContainerFactory", groupId = "test-group2")
     public void listen(String message) {
-        System.out.println("simple retrying consumer : " + message);
+        System.out.println("groupId: test-group2, simple retrying consumer : " + message);
         // handle business
         throw new RuntimeException("something bad happened");
     }

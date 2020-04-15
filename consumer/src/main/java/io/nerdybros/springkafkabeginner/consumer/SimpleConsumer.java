@@ -17,7 +17,7 @@ public class SimpleConsumer {
 
     @KafkaListener(topics = { "test-topic" }, containerFactory = "simpleListenerContainerFactory", groupId = "test-group")
     public void listen(String message) {
-        System.out.println("simple consumer : " + message);
+        System.out.println("groupId: test-group, simple consumer : " + message);
         // handle business
     }
 

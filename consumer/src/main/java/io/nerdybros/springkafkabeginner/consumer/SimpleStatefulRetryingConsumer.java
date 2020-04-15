@@ -19,7 +19,7 @@ public class SimpleStatefulRetryingConsumer {
 
     @KafkaListener(topics = { "test-topic-stateful-retry" }, containerFactory = "simpleStatefulRetryingListenerContainerFactory", groupId = "test-group2")
     public void listen(String message) {
-        System.out.println("simple stateful retrying consumer : " + message);
+        System.out.println("groupId: test-group2, simple stateful retrying consumer : " + message);
         // handle business
         throw new RuntimeException("something bad happened");
     }

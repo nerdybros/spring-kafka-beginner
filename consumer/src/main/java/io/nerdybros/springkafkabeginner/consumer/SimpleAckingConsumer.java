@@ -21,7 +21,7 @@ public class SimpleAckingConsumer {
 
     @KafkaListener(topics = { "test-topic" }, containerFactory = "simpleAckingListenerContainerFactory", groupId = "test-group8")
     public void listen(String message, @Header(KafkaHeaders.ACKNOWLEDGMENT)Acknowledgment acknowledgment) {
-        System.out.println("simple acking consumer : " + message);
+        System.out.println("groupId: test-group8, simple acking consumer : " + message);
         // handle business
         acknowledgment.acknowledge();
     }
