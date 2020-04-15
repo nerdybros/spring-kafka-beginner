@@ -2,11 +2,10 @@ package io.nerdybros.springkafkabeginner.producer.rest;
 
 import io.nerdybros.springkafkabeginner.producer.SimpleProducer;
 import io.nerdybros.springkafkabeginner.producer.SimpleProducerCallback;
+import io.nerdybros.springkafkabeginner.producer.SimplePartitionProducer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("producer")
@@ -20,13 +19,27 @@ public class ProducerController {
     @Qualifier("simpleProducerCallback")
     private SimpleProducerCallback producerCallback;
 
-    @GetMapping("/simple")
-    public void simpleProducer() {
-        this.producer.sendMessage("123");
+    @Autowired
+    @Qualifier("simplePartitionProducer")
+    private SimplePartitionProducer partitionProducer;
+
+    @PostMapping("/simple")
+    public void sendUsingSimpleProducer(@RequestBody String message) {
+        this.producer.sendMessage(message);
     }
 
-    @GetMapping("/simple-callback")
-    public void simpleProducerCallback() {
-        this.producerCallback.sendMessage("456");
+    @PostMapping("/simple-callback")
+    public void sendUsingSimpleProducerCallback(@RequestBody String message) {
+        this.producerCallback.sendMessage(message);
+    }
+
+    @PostMapping("/simple-partition")
+    public void sendUsingSimplePartitionProducer(@RequestParam String key, @RequestBody String message) {
+        this.partitionProducer.sendMessage(key, message);
+    }
+
+    @PostMapping("simple-partition-no-key")
+    public void sendUsingSimplePartitionNoKey(@RequestBody String message) {
+        this.partitionProducer.sendMessageNoMessageKey(message);
     }
 }

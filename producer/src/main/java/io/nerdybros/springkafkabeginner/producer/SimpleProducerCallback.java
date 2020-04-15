@@ -1,7 +1,5 @@
 package io.nerdybros.springkafkabeginner.producer;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.RecordMetadata;
 import org.apache.kafka.common.serialization.StringSerializer;
@@ -11,7 +9,10 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.kafka.core.DefaultKafkaProducerFactory;
 import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.kafka.support.KafkaHeaders;
 import org.springframework.kafka.support.SendResult;
+import org.springframework.messaging.Message;
+import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.stereotype.Component;
 import org.springframework.util.concurrent.ListenableFuture;
 import org.springframework.util.concurrent.ListenableFutureCallback;
@@ -22,7 +23,7 @@ import java.util.Map;
 @Component
 public class SimpleProducerCallback {
 
-    @Value("${kafka.topic}")
+    @Value("${kafka.topic:sample-topic}")
     private String topic;
 
     @Autowired
@@ -30,7 +31,13 @@ public class SimpleProducerCallback {
     private KafkaTemplate<String, String> kafkaTemplate;
 
     public void sendMessage(String message) {
-        ListenableFuture<SendResult<String, String>> future = kafkaTemplate.send(topic, message);
+
+        // Message<?> also supported
+        Message<String> record = MessageBuilder.withPayload(message)
+                                    .setHeader(KafkaHeaders.TOPIC, topic)
+                                    .build();
+
+        ListenableFuture<SendResult<String, String>> future = kafkaTemplate.send(record);
         future.addCallback(new ListenableFutureCallback<SendResult<String, String>>() {
             @Override
             public void onFailure(Throwable throwable) {
