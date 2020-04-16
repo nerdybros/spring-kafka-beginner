@@ -26,7 +26,7 @@ public class SimpleProducer {
     private KafkaTemplate<String, String> kafkaTemplate;
 
     public void sendMessage(String message) {
-        ListenableFuture<SendResult<String, String>> future = kafkaTemplate.send(topic, message);
+        kafkaTemplate.send(topic, message);
     }
 
     @Bean(name = "simpleProducerKafkaTemplate")
