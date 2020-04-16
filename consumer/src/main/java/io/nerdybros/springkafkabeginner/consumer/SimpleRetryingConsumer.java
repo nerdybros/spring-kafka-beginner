@@ -18,7 +18,7 @@ import java.util.Map;
 @Component
 public class SimpleRetryingConsumer {
 
-    @KafkaListener(topics = { "test-topic-retry" }, containerFactory = "simpleRetryingListenerContainerFactory", groupId = "test-group2")
+    @KafkaListener(topics = { "test-topic-retry" }, containerFactory = "simpleRetryingListenerContainerFactory", groupId = "test-group-retry")
     public void listen(String message) {
         System.out.println("simple retrying consumer : " + message);
         // handle business

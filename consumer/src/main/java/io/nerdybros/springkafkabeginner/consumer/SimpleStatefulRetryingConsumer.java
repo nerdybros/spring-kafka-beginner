@@ -17,7 +17,7 @@ import java.util.Map;
 @Component
 public class SimpleStatefulRetryingConsumer {
 
-    @KafkaListener(topics = { "test-topic-stateful-retry" }, containerFactory = "simpleStatefulRetryingListenerContainerFactory", groupId = "test-group2")
+    @KafkaListener(topics = { "test-topic-stateful-retry" }, containerFactory = "simpleStatefulRetryingListenerContainerFactory", groupId = "test-group-stateful-retry")
     public void listen(String message) {
         System.out.println("simple stateful retrying consumer : " + message);
         // handle business
@@ -45,6 +45,7 @@ public class SimpleStatefulRetryingConsumer {
 
         SeekToCurrentErrorHandler errorHandler = new SeekToCurrentErrorHandler(fixedBackOff);
         factory.setErrorHandler(errorHandler);
+        factory.setStatefulRetry(true);
 
         return factory;
     }

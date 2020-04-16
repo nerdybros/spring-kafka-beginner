@@ -15,7 +15,7 @@ import java.util.Map;
 @Component
 public class SimpleConsumer {
 
-    @KafkaListener(topics = { "test-topic" }, containerFactory = "simpleListenerContainerFactory", groupId = "test-group")
+    @KafkaListener(topics = { "test-topic" }, containerFactory = "simpleListenerContainerFactory", groupId = "test-group-simple")
     public void listen(String message) {
         System.out.println("simple consumer : " + message);
         // handle business

@@ -19,7 +19,7 @@ import java.util.Map;
 @Component
 public class SimpleAckingConsumer {
 
-    @KafkaListener(topics = { "test-topic" }, containerFactory = "simpleAckingListenerContainerFactory", groupId = "test-group8")
+    @KafkaListener(topics = { "test-topic" }, containerFactory = "simpleAckingListenerContainerFactory", groupId = "test-group-ack")
     public void listen(String message, @Header(KafkaHeaders.ACKNOWLEDGMENT)Acknowledgment acknowledgment) {
         System.out.println("simple acking consumer : " + message);
         // handle business

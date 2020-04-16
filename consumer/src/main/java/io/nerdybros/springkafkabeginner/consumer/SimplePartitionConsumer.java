@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class SimplePartitionConsumer {
 
-    private final String groupId = "test-group6";
+    private final String groupId = "test-group-partition";
 
     @KafkaListener(containerFactory = "simpleListenerContainerFactory", groupId = groupId,
         topicPartitions = @TopicPartition(topic = "sample-topic-mp",
