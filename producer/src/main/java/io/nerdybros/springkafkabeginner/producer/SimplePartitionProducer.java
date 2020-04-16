@@ -35,10 +35,10 @@ public class SimplePartitionProducer {
 
         /* Message with same keys will be guaranteed to be in same partition by Kafka*/
         // using key
-        ListenableFuture<SendResult<String, String>> future = kafkaTemplate.send(topic, key, message);
+        ListenableFuture<SendResult<String, String>> future = kafkaTemplate.send(topic, key,"Message\r\n" + message);
 
         // using Message<?> - set in Headers
-        Message<String> record = MessageBuilder.withPayload(message)
+        Message<String> record = MessageBuilder.withPayload("Builded Message\r\n" + message)
                                     .setHeader(KafkaHeaders.TOPIC, topic)
                                     .setHeader(KafkaHeaders.MESSAGE_KEY, key)
                                     .build();
@@ -47,10 +47,15 @@ public class SimplePartitionProducer {
 
         /* Assign partitions explicitly */
         // users can assign partition id (note: partition starts at 0)
-        ListenableFuture<SendResult<String, String>> futurePartitionOne = kafkaTemplate.send(topic, 1, key, message);
+        ListenableFuture<SendResult<String, String>> futurePartitionOne = kafkaTemplate.send(topic, 1, key, "Override Partition to 1, Message\r\n" + message);
+
+        Message<String> reBuildRecord = MessageBuilder.withPayload("Override Partition to 1, Builded Message\r\n" + message)
+                .setHeader(KafkaHeaders.TOPIC, topic)
+                .setHeader(KafkaHeaders.MESSAGE_KEY, key)
+                .build();
 
         // similarly, it is possible to set partition id in Message<?> headers
-        Message<String> recordWithPartition = MessageBuilder.fromMessage(record)
+        Message<String> recordWithPartition = MessageBuilder.fromMessage(reBuildRecord)
                                                 .setHeader(KafkaHeaders.PARTITION_ID, 1)
                                                 .build();
         ListenableFuture<SendResult<String, String>> futureUsingMessageAndPartition = kafkaTemplate.send(recordWithPartition);

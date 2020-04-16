@@ -16,10 +16,11 @@ import java.util.Map;
 public class SimpleFilteringConsumer {
 
     private final String filterContent = "111";
+    private final String groupId = "test-group-filter";
 
-    @KafkaListener(topics = { "test-topic" }, containerFactory = "simpleFilteringListenerContainerFactory", groupId = "test-group-filter")
+    @KafkaListener(topics = { "test-topic" }, containerFactory = "simpleFilteringListenerContainerFactory", groupId = groupId)
     public void listen(String message) {
-        System.out.println("filtering consumer : " + message);
+        System.out.println("[" + groupId + "] filtering consumer : " + message);
         // handle business
     }
 

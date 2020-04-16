@@ -23,9 +23,11 @@ import java.util.Map;
 @Component
 public class SimpleDLTConsumer {
 
-    @KafkaListener(topics = { "test-topic" }, containerFactory = "simpleDLTListenerContainerFactory", groupId = "test-group-dlt")
+    private final String groupId = "test-group-dlt";
+
+    @KafkaListener(topics = { "test-topic" }, containerFactory = "simpleDLTListenerContainerFactory", groupId = groupId)
     public void listen(String message) {
-        System.out.println("simple dlt consumer : " + message);
+        System.out.println("[" + groupId + "] simple dlt consumer : " + message);
         // handle business
         throw new RuntimeException("something bad happened");
     }

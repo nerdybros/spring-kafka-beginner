@@ -17,9 +17,11 @@ import java.util.Map;
 @Component
 public class SimpleStatefulRetryingConsumer {
 
-    @KafkaListener(topics = { "test-topic-stateful-retry" }, containerFactory = "simpleStatefulRetryingListenerContainerFactory", groupId = "test-group-stateful-retry")
+    private final String groupId = "test-group-stateful-retry";
+
+    @KafkaListener(topics = { "test-topic-stateful-retry" }, containerFactory = "simpleStatefulRetryingListenerContainerFactory", groupId = groupId)
     public void listen(String message) {
-        System.out.println("simple stateful retrying consumer : " + message);
+        System.out.println("[" + groupId + "] simple stateful retrying consumer : " + message);
         // handle business
         throw new RuntimeException("something bad happened");
     }

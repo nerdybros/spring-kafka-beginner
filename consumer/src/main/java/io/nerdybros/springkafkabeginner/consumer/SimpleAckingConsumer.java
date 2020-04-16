@@ -19,9 +19,11 @@ import java.util.Map;
 @Component
 public class SimpleAckingConsumer {
 
-    @KafkaListener(topics = { "test-topic" }, containerFactory = "simpleAckingListenerContainerFactory", groupId = "test-group-ack")
+    private final String groupId = "test-group-ack";
+
+    @KafkaListener(topics = { "test-topic" }, containerFactory = "simpleAckingListenerContainerFactory", groupId = groupId)
     public void listen(String message, @Header(KafkaHeaders.ACKNOWLEDGMENT)Acknowledgment acknowledgment) {
-        System.out.println("simple acking consumer : " + message);
+        System.out.println("[" + groupId + "] simple acking consumer : " + message);
         // handle business
         acknowledgment.acknowledge();
     }
