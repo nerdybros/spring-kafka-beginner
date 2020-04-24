@@ -3,3 +3,4 @@ server:
 kafka:
   topic: test-topic
   topic-mp: test-topic-mp
+  topic-tx: test-topic-tx
