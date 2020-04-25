@@ -20,12 +20,15 @@ import org.springframework.util.backoff.FixedBackOff;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 6강: Dead Letter Topic (DLT)
+ */
 @Component
-public class SimpleDLTConsumer {
+public class LessonSixConsumerToDLT {
 
     private final String groupId = "test-group-dlt";
 
-    @KafkaListener(topics = { "test-topic" }, containerFactory = "simpleDLTListenerContainerFactory", groupId = groupId)
+    @KafkaListener(topics = { "test-topic" }, containerFactory = "ListenerContainerToDeadLetterTopicFactory", groupId = groupId)
     public void listen(String message) {
         System.out.println("[" + groupId + "] simple dlt consumer : " + message);
         // handle business
@@ -41,7 +44,7 @@ public class SimpleDLTConsumer {
         return new DefaultKafkaConsumerFactory<>(props);
     }
 
-    @Bean("simpleDLTListenerContainerFactory")
+    @Bean("ListenerContainerToDeadLetterTopicFactory")
     public ConcurrentKafkaListenerContainerFactory<String, String> simpleKafkaListenerContainerFactory() {
         ConcurrentKafkaListenerContainerFactory<String, String> factory = new ConcurrentKafkaListenerContainerFactory<>();
         factory.setConsumerFactory(this.consumerFactory());

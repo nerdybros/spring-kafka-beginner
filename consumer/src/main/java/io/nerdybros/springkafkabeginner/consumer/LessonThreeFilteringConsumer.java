@@ -12,13 +12,18 @@ import org.springframework.stereotype.Component;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 3강: 이벤트 필터링
+ */
 @Component
-public class SimpleTransactionalConsumer {
-    private final String groupId = "test-group-tx";
+public class LessonThreeFilteringConsumer {
 
-    @KafkaListener(topics = { "test-topic-tx" }, containerFactory = "simpleTransactionalListenerContainerFactory", groupId = groupId)
+    private final String filterContent = "111";
+    private final String groupId = "test-group-filter";
+
+    @KafkaListener(topics = { "test-topic" }, containerFactory = "filteringListenerContainerFactory", groupId = groupId)
     public void listen(String message) {
-        System.out.println("[" + groupId + "] simple transactional consumer : " + message);
+        System.out.println("[" + groupId + "] filtering consumer : " + message);
         // handle business
     }
 
@@ -27,15 +32,19 @@ public class SimpleTransactionalConsumer {
         props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
         props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
         props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
+        props.put(ConsumerConfig.GROUP_ID_CONFIG, "test-group"); // can be overridden by groupId parameter in @KafkaListener
         props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
-        props.put(ConsumerConfig.ISOLATION_LEVEL_CONFIG, "read_committed");
         return new DefaultKafkaConsumerFactory<>(props);
     }
 
-    @Bean("simpleTransactionalListenerContainerFactory")
+    @Bean("filteringListenerContainerFactory")
     public ConcurrentKafkaListenerContainerFactory<String, String> simpleKafkaListenerContainerFactory() {
         ConcurrentKafkaListenerContainerFactory<String, String> factory = new ConcurrentKafkaListenerContainerFactory<>();
         factory.setConsumerFactory(this.consumerFactory());
+
+        // if the result is true, then the consumer won't process such record
+        factory.setRecordFilterStrategy(consumerRecord -> consumerRecord.value().contains(filterContent));
+
         return factory;
     }
 }

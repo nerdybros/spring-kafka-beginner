@@ -7,24 +7,23 @@ import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.config.ConcurrentKafkaListenerContainerFactory;
 import org.springframework.kafka.core.ConsumerFactory;
 import org.springframework.kafka.core.DefaultKafkaConsumerFactory;
-import org.springframework.retry.backoff.FixedBackOffPolicy;
-import org.springframework.retry.policy.SimpleRetryPolicy;
-import org.springframework.retry.support.RetryTemplate;
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 1강: 이벤트 수신 방법 설명
+ */
 @Component
-public class SimpleRetryingConsumer {
+public class LessonOneBasicConsumer {
 
-    private final String groupId = "test-group-retry";
+    private final String groupId = "test-group-simple";
 
-    @KafkaListener(topics = { "test-topic-retry" }, containerFactory = "simpleRetryingListenerContainerFactory", groupId = groupId)
+    @KafkaListener(topics = { "test-topic" }, containerFactory = "basicListenerContainerFactory", groupId = groupId)
     public void listen(String message) {
-        System.out.println("[" + groupId + "] simple retrying consumer : " + message);
+        System.out.println("[" + groupId + "] basic consumer : " + message);
         // handle business
-        throw new RuntimeException("something bad happened");
     }
 
     public ConsumerFactory<String, String> consumerFactory() {
@@ -36,25 +35,10 @@ public class SimpleRetryingConsumer {
         return new DefaultKafkaConsumerFactory<>(props);
     }
 
-    @Bean("simpleRetryingListenerContainerFactory")
+    @Bean("basicListenerContainerFactory")
     public ConcurrentKafkaListenerContainerFactory<String, String> simpleKafkaListenerContainerFactory() {
         ConcurrentKafkaListenerContainerFactory<String, String> factory = new ConcurrentKafkaListenerContainerFactory<>();
         factory.setConsumerFactory(this.consumerFactory());
-
-        /* Retries using RetryTemplate */
-        RetryTemplate retryTemplate = new RetryTemplate();
-        // set how many milliseconds next try should be started
-        FixedBackOffPolicy backOffPolicy = new FixedBackOffPolicy(); // or ExponentialBackOffPolicy can be used
-        backOffPolicy.setBackOffPeriod(1000l);
-        retryTemplate.setBackOffPolicy(backOffPolicy);
-
-        // set maximum attempts
-        SimpleRetryPolicy retryPolicy = new SimpleRetryPolicy();
-        retryPolicy.setMaxAttempts(3);
-        retryTemplate.setRetryPolicy(retryPolicy);
-
-        factory.setRetryTemplate(retryTemplate);
-
         return factory;
     }
 }

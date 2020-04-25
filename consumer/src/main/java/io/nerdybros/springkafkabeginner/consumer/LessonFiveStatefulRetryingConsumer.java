@@ -7,25 +7,26 @@ import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.config.ConcurrentKafkaListenerContainerFactory;
 import org.springframework.kafka.core.ConsumerFactory;
 import org.springframework.kafka.core.DefaultKafkaConsumerFactory;
-import org.springframework.kafka.listener.ContainerProperties;
-import org.springframework.kafka.support.Acknowledgment;
-import org.springframework.kafka.support.KafkaHeaders;
-import org.springframework.messaging.handler.annotation.Header;
+import org.springframework.kafka.listener.SeekToCurrentErrorHandler;
 import org.springframework.stereotype.Component;
+import org.springframework.util.backoff.FixedBackOff;
 
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 5강: Consumer stateful retry
+ */
 @Component
-public class SimpleAckingConsumer {
+public class LessonFiveStatefulRetryingConsumer {
 
-    private final String groupId = "test-group-ack";
+    private final String groupId = "test-group-stateful-retry";
 
-    @KafkaListener(topics = { "test-topic" }, containerFactory = "simpleAckingListenerContainerFactory", groupId = groupId)
-    public void listen(String message, @Header(KafkaHeaders.ACKNOWLEDGMENT)Acknowledgment acknowledgment) {
-        System.out.println("[" + groupId + "] simple acking consumer : " + message);
+    @KafkaListener(topics = { "test-topic-stateful-retry" }, containerFactory = "simpleStatefulRetryingListenerContainerFactory", groupId = groupId)
+    public void listen(String message) {
+        System.out.println("[" + groupId + "] simple stateful retrying consumer : " + message);
         // handle business
-        acknowledgment.acknowledge();
+        throw new RuntimeException("something bad happened");
     }
 
     public ConsumerFactory<String, String> consumerFactory() {
@@ -37,11 +38,20 @@ public class SimpleAckingConsumer {
         return new DefaultKafkaConsumerFactory<>(props);
     }
 
-    @Bean("simpleAckingListenerContainerFactory")
+    @Bean("simpleStatefulRetryingListenerContainerFactory")
     public ConcurrentKafkaListenerContainerFactory<String, String> simpleKafkaListenerContainerFactory() {
         ConcurrentKafkaListenerContainerFactory<String, String> factory = new ConcurrentKafkaListenerContainerFactory<>();
         factory.setConsumerFactory(this.consumerFactory());
-        factory.getContainerProperties().setAckMode(ContainerProperties.AckMode.MANUAL);
+
+        /* Retries using SeekToCurrentErrorHandler */
+        FixedBackOff fixedBackOff = new FixedBackOff();
+        fixedBackOff.setInterval(1000l);
+        fixedBackOff.setMaxAttempts(3);
+
+        SeekToCurrentErrorHandler errorHandler = new SeekToCurrentErrorHandler(fixedBackOff);
+        factory.setErrorHandler(errorHandler);
+        factory.setStatefulRetry(true);
+
         return factory;
     }
 }

@@ -8,12 +8,15 @@ import org.springframework.messaging.handler.annotation.Header;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.stereotype.Component;
 
+/**
+ * 2강: 특정 파티션에 바인딩해서 수신
+ */
 @Component
-public class SimplePartitionConsumer {
+public class LessonTwoSpecificPartitionConsumer {
 
     private final String groupId = "test-group-partition";
 
-	@KafkaListener(containerFactory = "simpleListenerContainerFactory", groupId = groupId,
+	@KafkaListener(containerFactory = "basicListenerContainerFactory", groupId = groupId,
 			topicPartitions = @TopicPartition(topic = "test-topic-mp", partitionOffsets = @PartitionOffset(partition = "0", initialOffset = "0")))
 	public void listen(@Payload String message,
 			@Header(KafkaHeaders.RECEIVED_PARTITION_ID) int partition,
@@ -22,7 +25,7 @@ public class SimplePartitionConsumer {
 		// handle business
 	}
 
-	@KafkaListener(containerFactory = "simpleListenerContainerFactory", groupId = groupId,
+	@KafkaListener(containerFactory = "basicListenerContainerFactory", groupId = groupId,
 			topicPartitions = @TopicPartition(topic = "test-topic-mp", partitions = { "1", "2" }))
 	public void listen2(@Payload String message,
 			@Header(KafkaHeaders.RECEIVED_PARTITION_ID) int partition,

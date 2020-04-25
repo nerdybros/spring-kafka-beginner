@@ -1,0 +1,1194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="io.nerdybros.springkafkabeginner.SpringKafkaBeginnerApplicationTests" time="4.206" tests="1" errors="1" skipped="0" failures="0">
+  <properties>
+    <property name="gopherProxySet" value="false"/>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/jkim/workspace/nerdybros/spring-kafka-beginner/consumer/target/test-classes:/Users/jkim/workspace/nerdybros/spring-kafka-beginner/consumer/target/classes:/Users/jkim/.m2/repository/org/springframework/boot/spring-boot-starter-web/2.3.0.BUILD-SNAPSHOT/spring-boot-starter-web-2.3.0.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/org/springframework/boot/spring-boot-starter/2.3.0.BUILD-SNAPSHOT/spring-boot-starter-2.3.0.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/org/springframework/boot/spring-boot/2.3.0.BUILD-SNAPSHOT/spring-boot-2.3.0.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.3.0.BUILD-SNAPSHOT/spring-boot-autoconfigure-2.3.0.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/org/springframework/boot/spring-boot-starter-logging/2.3.0.BUILD-SNAPSHOT/spring-boot-starter-logging-2.3.0.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar:/Users/jkim/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar:/Users/jkim/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.13.1/log4j-to-slf4j-2.13.1.jar:/Users/jkim/.m2/repository/org/apache/logging/log4j/log4j-api/2.13.1/log4j-api-2.13.1.jar:/Users/jkim/.m2/repository/org/slf4j/jul-to-slf4j/1.7.30/jul-to-slf4j-1.7.30.jar:/Users/jkim/.m2/repository/jakarta/annotation/jakarta.annotation-api/1.3.5/jakarta.annotation-api-1.3.5.jar:/Users/jkim/.m2/repository/org/yaml/snakeyaml/1.26/snakeyaml-1.26.jar:/Users/jkim/.m2/repository/org/springframework/boot/spring-boot-starter-json/2.3.0.BUILD-SNAPSHOT/spring-boot-starter-json-2.3.0.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.10.3/jackson-databind-2.10.3.jar:/Users/jkim/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.10.3/jackson-annotations-2.10.3.jar:/Users/jkim/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.10.3/jackson-core-2.10.3.jar:/Users/jkim/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.10.3/jackson-datatype-jdk8-2.10.3.jar:/Users/jkim/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.10.3/jackson-datatype-jsr310-2.10.3.jar:/Users/jkim/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.10.3/jackson-module-parameter-names-2.10.3.jar:/Users/jkim/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/2.3.0.BUILD-SNAPSHOT/spring-boot-starter-tomcat-2.3.0.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.33/tomcat-embed-core-9.0.33.jar:/Users/jkim/.m2/repository/org/glassfish/jakarta.el/3.0.3/jakarta.el-3.0.3.jar:/Users/jkim/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/9.0.33/tomcat-embed-websocket-9.0.33.jar:/Users/jkim/.m2/repository/org/springframework/spring-web/5.2.6.BUILD-SNAPSHOT/spring-web-5.2.6.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/org/springframework/spring-beans/5.2.6.BUILD-SNAPSHOT/spring-beans-5.2.6.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/org/springframework/spring-webmvc/5.2.6.BUILD-SNAPSHOT/spring-webmvc-5.2.6.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/org/springframework/spring-aop/5.2.6.BUILD-SNAPSHOT/spring-aop-5.2.6.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/org/springframework/spring-expression/5.2.6.BUILD-SNAPSHOT/spring-expression-5.2.6.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/org/springframework/kafka/spring-kafka/2.5.0.BUILD-SNAPSHOT/spring-kafka-2.5.0.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/org/springframework/spring-context/5.2.6.BUILD-SNAPSHOT/spring-context-5.2.6.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/org/springframework/spring-messaging/5.2.6.BUILD-SNAPSHOT/spring-messaging-5.2.6.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/org/springframework/spring-tx/5.2.6.BUILD-SNAPSHOT/spring-tx-5.2.6.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/org/springframework/retry/spring-retry/1.2.5.RELEASE/spring-retry-1.2.5.RELEASE.jar:/Users/jkim/.m2/repository/org/apache/kafka/kafka-clients/2.5.0/kafka-clients-2.5.0.jar:/Users/jkim/.m2/repository/com/github/luben/zstd-jni/1.4.4-7/zstd-jni-1.4.4-7.jar:/Users/jkim/.m2/repository/org/lz4/lz4-java/1.7.1/lz4-java-1.7.1.jar:/Users/jkim/.m2/repository/org/xerial/snappy/snappy-java/1.1.7.3/snappy-java-1.1.7.3.jar:/Users/jkim/.m2/repository/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar:/Users/jkim/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/2.3.0.BUILD-SNAPSHOT/spring-boot-starter-data-jpa-2.3.0.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/org/springframework/boot/spring-boot-starter-aop/2.3.0.BUILD-SNAPSHOT/spring-boot-starter-aop-2.3.0.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/org/aspectj/aspectjweaver/1.9.5/aspectjweaver-1.9.5.jar:/Users/jkim/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/2.3.0.BUILD-SNAPSHOT/spring-boot-starter-jdbc-2.3.0.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/com/zaxxer/HikariCP/3.4.2/HikariCP-3.4.2.jar:/Users/jkim/.m2/repository/org/springframework/spring-jdbc/5.2.6.BUILD-SNAPSHOT/spring-jdbc-5.2.6.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/jakarta/transaction/jakarta.transaction-api/1.3.3/jakarta.transaction-api-1.3.3.jar:/Users/jkim/.m2/repository/jakarta/persistence/jakarta.persistence-api/2.2.3/jakarta.persistence-api-2.2.3.jar:/Users/jkim/.m2/repository/org/hibernate/hibernate-core/5.4.13.Final/hibernate-core-5.4.13.Final.jar:/Users/jkim/.m2/repository/org/jboss/logging/jboss-logging/3.4.1.Final/jboss-logging-3.4.1.Final.jar:/Users/jkim/.m2/repository/org/javassist/javassist/3.24.0-GA/javassist-3.24.0-GA.jar:/Users/jkim/.m2/repository/net/bytebuddy/byte-buddy/1.10.9/byte-buddy-1.10.9.jar:/Users/jkim/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/Users/jkim/.m2/repository/org/jboss/jandex/2.1.1.Final/jandex-2.1.1.Final.jar:/Users/jkim/.m2/repository/com/fasterxml/classmate/1.5.1/classmate-1.5.1.jar:/Users/jkim/.m2/repository/org/dom4j/dom4j/2.1.1/dom4j-2.1.1.jar:/Users/jkim/.m2/repository/org/hibernate/common/hibernate-commons-annotations/5.1.0.Final/hibernate-commons-annotations-5.1.0.Final.jar:/Users/jkim/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar:/Users/jkim/.m2/repository/org/glassfish/jaxb/txw2/2.3.2/txw2-2.3.2.jar:/Users/jkim/.m2/repository/com/sun/istack/istack-commons-runtime/3.0.8/istack-commons-runtime-3.0.8.jar:/Users/jkim/.m2/repository/org/jvnet/staxex/stax-ex/1.8.1/stax-ex-1.8.1.jar:/Users/jkim/.m2/repository/com/sun/xml/fastinfoset/FastInfoset/1.2.16/FastInfoset-1.2.16.jar:/Users/jkim/.m2/repository/org/springframework/data/spring-data-jpa/2.3.0.BUILD-SNAPSHOT/spring-data-jpa-2.3.0.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/org/springframework/data/spring-data-commons/2.3.0.BUILD-SNAPSHOT/spring-data-commons-2.3.0.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/org/springframework/spring-orm/5.2.6.BUILD-SNAPSHOT/spring-orm-5.2.6.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/org/springframework/spring-aspects/5.2.6.BUILD-SNAPSHOT/spring-aspects-5.2.6.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/com/h2database/h2/1.4.200/h2-1.4.200.jar:/Users/jkim/.m2/repository/org/projectlombok/lombok/1.18.12/lombok-1.18.12.jar:/Users/jkim/.m2/repository/org/springframework/boot/spring-boot-starter-test/2.3.0.BUILD-SNAPSHOT/spring-boot-starter-test-2.3.0.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/org/springframework/boot/spring-boot-test/2.3.0.BUILD-SNAPSHOT/spring-boot-test-2.3.0.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/2.3.0.BUILD-SNAPSHOT/spring-boot-test-autoconfigure-2.3.0.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/com/jayway/jsonpath/json-path/2.4.0/json-path-2.4.0.jar:/Users/jkim/.m2/repository/net/minidev/json-smart/2.3/json-smart-2.3.jar:/Users/jkim/.m2/repository/net/minidev/accessors-smart/1.2/accessors-smart-1.2.jar:/Users/jkim/.m2/repository/org/ow2/asm/asm/5.0.4/asm-5.0.4.jar:/Users/jkim/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar:/Users/jkim/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.2/jakarta.activation-api-1.2.2.jar:/Users/jkim/.m2/repository/org/assertj/assertj-core/3.15.0/assertj-core-3.15.0.jar:/Users/jkim/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/jkim/.m2/repository/org/junit/jupiter/junit-jupiter/5.6.1/junit-jupiter-5.6.1.jar:/Users/jkim/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.6.1/junit-jupiter-params-5.6.1.jar:/Users/jkim/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.6.1/junit-jupiter-engine-5.6.1.jar:/Users/jkim/.m2/repository/org/junit/platform/junit-platform-engine/1.6.1/junit-platform-engine-1.6.1.jar:/Users/jkim/.m2/repository/org/mockito/mockito-core/3.3.3/mockito-core-3.3.3.jar:/Users/jkim/.m2/repository/net/bytebuddy/byte-buddy-agent/1.10.9/byte-buddy-agent-1.10.9.jar:/Users/jkim/.m2/repository/org/objenesis/objenesis/2.6/objenesis-2.6.jar:/Users/jkim/.m2/repository/org/mockito/mockito-junit-jupiter/3.3.3/mockito-junit-jupiter-3.3.3.jar:/Users/jkim/.m2/repository/org/skyscreamer/jsonassert/1.5.0/jsonassert-1.5.0.jar:/Users/jkim/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/jkim/.m2/repository/org/springframework/spring-core/5.2.6.BUILD-SNAPSHOT/spring-core-5.2.6.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/org/springframework/spring-jcl/5.2.6.BUILD-SNAPSHOT/spring-jcl-5.2.6.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/org/springframework/spring-test/5.2.6.BUILD-SNAPSHOT/spring-test-5.2.6.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/org/xmlunit/xmlunit-core/2.6.4/xmlunit-core-2.6.4.jar:/Users/jkim/.m2/repository/org/springframework/kafka/spring-kafka-test/2.5.0.BUILD-SNAPSHOT/spring-kafka-test-2.5.0.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/org/apache/kafka/kafka-clients/2.5.0/kafka-clients-2.5.0-test.jar:/Users/jkim/.m2/repository/org/apache/kafka/kafka-streams/2.5.0/kafka-streams-2.5.0.jar:/Users/jkim/.m2/repository/org/apache/kafka/connect-json/2.5.0/connect-json-2.5.0.jar:/Users/jkim/.m2/repository/org/apache/kafka/connect-api/2.5.0/connect-api-2.5.0.jar:/Users/jkim/.m2/repository/org/rocksdb/rocksdbjni/5.18.3/rocksdbjni-5.18.3.jar:/Users/jkim/.m2/repository/org/apache/kafka/kafka-streams-test-utils/2.5.0/kafka-streams-test-utils-2.5.0.jar:/Users/jkim/.m2/repository/org/apache/kafka/kafka_2.12/2.5.0/kafka_2.12-2.5.0.jar:/Users/jkim/.m2/repository/com/fasterxml/jackson/module/jackson-module-scala_2.12/2.10.3/jackson-module-scala_2.12-2.10.3.jar:/Users/jkim/.m2/repository/com/fasterxml/jackson/module/jackson-module-paranamer/2.10.3/jackson-module-paranamer-2.10.3.jar:/Users/jkim/.m2/repository/com/thoughtworks/paranamer/paranamer/2.8/paranamer-2.8.jar:/Users/jkim/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-csv/2.10.3/jackson-dataformat-csv-2.10.3.jar:/Users/jkim/.m2/repository/net/sf/jopt-simple/jopt-simple/5.0.4/jopt-simple-5.0.4.jar:/Users/jkim/.m2/repository/com/yammer/metrics/metrics-core/2.2.0/metrics-core-2.2.0.jar:/Users/jkim/.m2/repository/org/scala-lang/modules/scala-collection-compat_2.12/2.1.3/scala-collection-compat_2.12-2.1.3.jar:/Users/jkim/.m2/repository/org/scala-lang/modules/scala-java8-compat_2.12/0.9.0/scala-java8-compat_2.12-0.9.0.jar:/Users/jkim/.m2/repository/org/scala-lang/scala-library/2.12.10/scala-library-2.12.10.jar:/Users/jkim/.m2/repository/org/scala-lang/scala-reflect/2.12.10/scala-reflect-2.12.10.jar:/Users/jkim/.m2/repository/com/typesafe/scala-logging/scala-logging_2.12/3.9.2/scala-logging_2.12-3.9.2.jar:/Users/jkim/.m2/repository/org/apache/zookeeper/zookeeper/3.5.7/zookeeper-3.5.7.jar:/Users/jkim/.m2/repository/org/apache/zookeeper/zookeeper-jute/3.5.7/zookeeper-jute-3.5.7.jar:/Users/jkim/.m2/repository/org/apache/yetus/audience-annotations/0.5.0/audience-annotations-0.5.0.jar:/Users/jkim/.m2/repository/io/netty/netty-handler/4.1.48.Final/netty-handler-4.1.48.Final.jar:/Users/jkim/.m2/repository/io/netty/netty-common/4.1.48.Final/netty-common-4.1.48.Final.jar:/Users/jkim/.m2/repository/io/netty/netty-resolver/4.1.48.Final/netty-resolver-4.1.48.Final.jar:/Users/jkim/.m2/repository/io/netty/netty-buffer/4.1.48.Final/netty-buffer-4.1.48.Final.jar:/Users/jkim/.m2/repository/io/netty/netty-transport/4.1.48.Final/netty-transport-4.1.48.Final.jar:/Users/jkim/.m2/repository/io/netty/netty-codec/4.1.48.Final/netty-codec-4.1.48.Final.jar:/Users/jkim/.m2/repository/io/netty/netty-transport-native-epoll/4.1.48.Final/netty-transport-native-epoll-4.1.48.Final.jar:/Users/jkim/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.48.Final/netty-transport-native-unix-common-4.1.48.Final.jar:/Users/jkim/.m2/repository/commons-cli/commons-cli/1.4/commons-cli-1.4.jar:/Users/jkim/.m2/repository/org/apache/kafka/kafka_2.12/2.5.0/kafka_2.12-2.5.0-test.jar:/Users/jkim/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.1/junit-jupiter-api-5.6.1.jar:/Users/jkim/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/Users/jkim/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/jkim/.m2/repository/org/junit/platform/junit-platform-commons/1.6.1/junit-platform-commons-1.6.1.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value=""/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="user.country" value="KR"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/jre/lib"/>
+    <property name="sun.java.command" value="/Users/jkim/workspace/nerdybros/spring-kafka-beginner/consumer/target/surefire/surefirebooter8620012233052482250.jar /Users/jkim/workspace/nerdybros/spring-kafka-beginner/consumer/target/surefire 2020-04-25T19-30-21_204-jvmRun1 surefire4177107472511232702tmp surefire_08018968197233038242tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="surefire.test.class.path" value="/Users/jkim/workspace/nerdybros/spring-kafka-beginner/consumer/target/test-classes:/Users/jkim/workspace/nerdybros/spring-kafka-beginner/consumer/target/classes:/Users/jkim/.m2/repository/org/springframework/boot/spring-boot-starter-web/2.3.0.BUILD-SNAPSHOT/spring-boot-starter-web-2.3.0.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/org/springframework/boot/spring-boot-starter/2.3.0.BUILD-SNAPSHOT/spring-boot-starter-2.3.0.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/org/springframework/boot/spring-boot/2.3.0.BUILD-SNAPSHOT/spring-boot-2.3.0.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.3.0.BUILD-SNAPSHOT/spring-boot-autoconfigure-2.3.0.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/org/springframework/boot/spring-boot-starter-logging/2.3.0.BUILD-SNAPSHOT/spring-boot-starter-logging-2.3.0.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar:/Users/jkim/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar:/Users/jkim/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.13.1/log4j-to-slf4j-2.13.1.jar:/Users/jkim/.m2/repository/org/apache/logging/log4j/log4j-api/2.13.1/log4j-api-2.13.1.jar:/Users/jkim/.m2/repository/org/slf4j/jul-to-slf4j/1.7.30/jul-to-slf4j-1.7.30.jar:/Users/jkim/.m2/repository/jakarta/annotation/jakarta.annotation-api/1.3.5/jakarta.annotation-api-1.3.5.jar:/Users/jkim/.m2/repository/org/yaml/snakeyaml/1.26/snakeyaml-1.26.jar:/Users/jkim/.m2/repository/org/springframework/boot/spring-boot-starter-json/2.3.0.BUILD-SNAPSHOT/spring-boot-starter-json-2.3.0.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.10.3/jackson-databind-2.10.3.jar:/Users/jkim/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.10.3/jackson-annotations-2.10.3.jar:/Users/jkim/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.10.3/jackson-core-2.10.3.jar:/Users/jkim/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.10.3/jackson-datatype-jdk8-2.10.3.jar:/Users/jkim/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.10.3/jackson-datatype-jsr310-2.10.3.jar:/Users/jkim/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.10.3/jackson-module-parameter-names-2.10.3.jar:/Users/jkim/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/2.3.0.BUILD-SNAPSHOT/spring-boot-starter-tomcat-2.3.0.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.33/tomcat-embed-core-9.0.33.jar:/Users/jkim/.m2/repository/org/glassfish/jakarta.el/3.0.3/jakarta.el-3.0.3.jar:/Users/jkim/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/9.0.33/tomcat-embed-websocket-9.0.33.jar:/Users/jkim/.m2/repository/org/springframework/spring-web/5.2.6.BUILD-SNAPSHOT/spring-web-5.2.6.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/org/springframework/spring-beans/5.2.6.BUILD-SNAPSHOT/spring-beans-5.2.6.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/org/springframework/spring-webmvc/5.2.6.BUILD-SNAPSHOT/spring-webmvc-5.2.6.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/org/springframework/spring-aop/5.2.6.BUILD-SNAPSHOT/spring-aop-5.2.6.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/org/springframework/spring-expression/5.2.6.BUILD-SNAPSHOT/spring-expression-5.2.6.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/org/springframework/kafka/spring-kafka/2.5.0.BUILD-SNAPSHOT/spring-kafka-2.5.0.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/org/springframework/spring-context/5.2.6.BUILD-SNAPSHOT/spring-context-5.2.6.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/org/springframework/spring-messaging/5.2.6.BUILD-SNAPSHOT/spring-messaging-5.2.6.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/org/springframework/spring-tx/5.2.6.BUILD-SNAPSHOT/spring-tx-5.2.6.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/org/springframework/retry/spring-retry/1.2.5.RELEASE/spring-retry-1.2.5.RELEASE.jar:/Users/jkim/.m2/repository/org/apache/kafka/kafka-clients/2.5.0/kafka-clients-2.5.0.jar:/Users/jkim/.m2/repository/com/github/luben/zstd-jni/1.4.4-7/zstd-jni-1.4.4-7.jar:/Users/jkim/.m2/repository/org/lz4/lz4-java/1.7.1/lz4-java-1.7.1.jar:/Users/jkim/.m2/repository/org/xerial/snappy/snappy-java/1.1.7.3/snappy-java-1.1.7.3.jar:/Users/jkim/.m2/repository/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar:/Users/jkim/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/2.3.0.BUILD-SNAPSHOT/spring-boot-starter-data-jpa-2.3.0.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/org/springframework/boot/spring-boot-starter-aop/2.3.0.BUILD-SNAPSHOT/spring-boot-starter-aop-2.3.0.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/org/aspectj/aspectjweaver/1.9.5/aspectjweaver-1.9.5.jar:/Users/jkim/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/2.3.0.BUILD-SNAPSHOT/spring-boot-starter-jdbc-2.3.0.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/com/zaxxer/HikariCP/3.4.2/HikariCP-3.4.2.jar:/Users/jkim/.m2/repository/org/springframework/spring-jdbc/5.2.6.BUILD-SNAPSHOT/spring-jdbc-5.2.6.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/jakarta/transaction/jakarta.transaction-api/1.3.3/jakarta.transaction-api-1.3.3.jar:/Users/jkim/.m2/repository/jakarta/persistence/jakarta.persistence-api/2.2.3/jakarta.persistence-api-2.2.3.jar:/Users/jkim/.m2/repository/org/hibernate/hibernate-core/5.4.13.Final/hibernate-core-5.4.13.Final.jar:/Users/jkim/.m2/repository/org/jboss/logging/jboss-logging/3.4.1.Final/jboss-logging-3.4.1.Final.jar:/Users/jkim/.m2/repository/org/javassist/javassist/3.24.0-GA/javassist-3.24.0-GA.jar:/Users/jkim/.m2/repository/net/bytebuddy/byte-buddy/1.10.9/byte-buddy-1.10.9.jar:/Users/jkim/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/Users/jkim/.m2/repository/org/jboss/jandex/2.1.1.Final/jandex-2.1.1.Final.jar:/Users/jkim/.m2/repository/com/fasterxml/classmate/1.5.1/classmate-1.5.1.jar:/Users/jkim/.m2/repository/org/dom4j/dom4j/2.1.1/dom4j-2.1.1.jar:/Users/jkim/.m2/repository/org/hibernate/common/hibernate-commons-annotations/5.1.0.Final/hibernate-commons-annotations-5.1.0.Final.jar:/Users/jkim/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar:/Users/jkim/.m2/repository/org/glassfish/jaxb/txw2/2.3.2/txw2-2.3.2.jar:/Users/jkim/.m2/repository/com/sun/istack/istack-commons-runtime/3.0.8/istack-commons-runtime-3.0.8.jar:/Users/jkim/.m2/repository/org/jvnet/staxex/stax-ex/1.8.1/stax-ex-1.8.1.jar:/Users/jkim/.m2/repository/com/sun/xml/fastinfoset/FastInfoset/1.2.16/FastInfoset-1.2.16.jar:/Users/jkim/.m2/repository/org/springframework/data/spring-data-jpa/2.3.0.BUILD-SNAPSHOT/spring-data-jpa-2.3.0.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/org/springframework/data/spring-data-commons/2.3.0.BUILD-SNAPSHOT/spring-data-commons-2.3.0.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/org/springframework/spring-orm/5.2.6.BUILD-SNAPSHOT/spring-orm-5.2.6.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/org/springframework/spring-aspects/5.2.6.BUILD-SNAPSHOT/spring-aspects-5.2.6.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/com/h2database/h2/1.4.200/h2-1.4.200.jar:/Users/jkim/.m2/repository/org/projectlombok/lombok/1.18.12/lombok-1.18.12.jar:/Users/jkim/.m2/repository/org/springframework/boot/spring-boot-starter-test/2.3.0.BUILD-SNAPSHOT/spring-boot-starter-test-2.3.0.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/org/springframework/boot/spring-boot-test/2.3.0.BUILD-SNAPSHOT/spring-boot-test-2.3.0.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/2.3.0.BUILD-SNAPSHOT/spring-boot-test-autoconfigure-2.3.0.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/com/jayway/jsonpath/json-path/2.4.0/json-path-2.4.0.jar:/Users/jkim/.m2/repository/net/minidev/json-smart/2.3/json-smart-2.3.jar:/Users/jkim/.m2/repository/net/minidev/accessors-smart/1.2/accessors-smart-1.2.jar:/Users/jkim/.m2/repository/org/ow2/asm/asm/5.0.4/asm-5.0.4.jar:/Users/jkim/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar:/Users/jkim/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.2/jakarta.activation-api-1.2.2.jar:/Users/jkim/.m2/repository/org/assertj/assertj-core/3.15.0/assertj-core-3.15.0.jar:/Users/jkim/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/jkim/.m2/repository/org/junit/jupiter/junit-jupiter/5.6.1/junit-jupiter-5.6.1.jar:/Users/jkim/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.6.1/junit-jupiter-params-5.6.1.jar:/Users/jkim/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.6.1/junit-jupiter-engine-5.6.1.jar:/Users/jkim/.m2/repository/org/junit/platform/junit-platform-engine/1.6.1/junit-platform-engine-1.6.1.jar:/Users/jkim/.m2/repository/org/mockito/mockito-core/3.3.3/mockito-core-3.3.3.jar:/Users/jkim/.m2/repository/net/bytebuddy/byte-buddy-agent/1.10.9/byte-buddy-agent-1.10.9.jar:/Users/jkim/.m2/repository/org/objenesis/objenesis/2.6/objenesis-2.6.jar:/Users/jkim/.m2/repository/org/mockito/mockito-junit-jupiter/3.3.3/mockito-junit-jupiter-3.3.3.jar:/Users/jkim/.m2/repository/org/skyscreamer/jsonassert/1.5.0/jsonassert-1.5.0.jar:/Users/jkim/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/jkim/.m2/repository/org/springframework/spring-core/5.2.6.BUILD-SNAPSHOT/spring-core-5.2.6.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/org/springframework/spring-jcl/5.2.6.BUILD-SNAPSHOT/spring-jcl-5.2.6.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/org/springframework/spring-test/5.2.6.BUILD-SNAPSHOT/spring-test-5.2.6.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/org/xmlunit/xmlunit-core/2.6.4/xmlunit-core-2.6.4.jar:/Users/jkim/.m2/repository/org/springframework/kafka/spring-kafka-test/2.5.0.BUILD-SNAPSHOT/spring-kafka-test-2.5.0.BUILD-SNAPSHOT.jar:/Users/jkim/.m2/repository/org/apache/kafka/kafka-clients/2.5.0/kafka-clients-2.5.0-test.jar:/Users/jkim/.m2/repository/org/apache/kafka/kafka-streams/2.5.0/kafka-streams-2.5.0.jar:/Users/jkim/.m2/repository/org/apache/kafka/connect-json/2.5.0/connect-json-2.5.0.jar:/Users/jkim/.m2/repository/org/apache/kafka/connect-api/2.5.0/connect-api-2.5.0.jar:/Users/jkim/.m2/repository/org/rocksdb/rocksdbjni/5.18.3/rocksdbjni-5.18.3.jar:/Users/jkim/.m2/repository/org/apache/kafka/kafka-streams-test-utils/2.5.0/kafka-streams-test-utils-2.5.0.jar:/Users/jkim/.m2/repository/org/apache/kafka/kafka_2.12/2.5.0/kafka_2.12-2.5.0.jar:/Users/jkim/.m2/repository/com/fasterxml/jackson/module/jackson-module-scala_2.12/2.10.3/jackson-module-scala_2.12-2.10.3.jar:/Users/jkim/.m2/repository/com/fasterxml/jackson/module/jackson-module-paranamer/2.10.3/jackson-module-paranamer-2.10.3.jar:/Users/jkim/.m2/repository/com/thoughtworks/paranamer/paranamer/2.8/paranamer-2.8.jar:/Users/jkim/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-csv/2.10.3/jackson-dataformat-csv-2.10.3.jar:/Users/jkim/.m2/repository/net/sf/jopt-simple/jopt-simple/5.0.4/jopt-simple-5.0.4.jar:/Users/jkim/.m2/repository/com/yammer/metrics/metrics-core/2.2.0/metrics-core-2.2.0.jar:/Users/jkim/.m2/repository/org/scala-lang/modules/scala-collection-compat_2.12/2.1.3/scala-collection-compat_2.12-2.1.3.jar:/Users/jkim/.m2/repository/org/scala-lang/modules/scala-java8-compat_2.12/0.9.0/scala-java8-compat_2.12-0.9.0.jar:/Users/jkim/.m2/repository/org/scala-lang/scala-library/2.12.10/scala-library-2.12.10.jar:/Users/jkim/.m2/repository/org/scala-lang/scala-reflect/2.12.10/scala-reflect-2.12.10.jar:/Users/jkim/.m2/repository/com/typesafe/scala-logging/scala-logging_2.12/3.9.2/scala-logging_2.12-3.9.2.jar:/Users/jkim/.m2/repository/org/apache/zookeeper/zookeeper/3.5.7/zookeeper-3.5.7.jar:/Users/jkim/.m2/repository/org/apache/zookeeper/zookeeper-jute/3.5.7/zookeeper-jute-3.5.7.jar:/Users/jkim/.m2/repository/org/apache/yetus/audience-annotations/0.5.0/audience-annotations-0.5.0.jar:/Users/jkim/.m2/repository/io/netty/netty-handler/4.1.48.Final/netty-handler-4.1.48.Final.jar:/Users/jkim/.m2/repository/io/netty/netty-common/4.1.48.Final/netty-common-4.1.48.Final.jar:/Users/jkim/.m2/repository/io/netty/netty-resolver/4.1.48.Final/netty-resolver-4.1.48.Final.jar:/Users/jkim/.m2/repository/io/netty/netty-buffer/4.1.48.Final/netty-buffer-4.1.48.Final.jar:/Users/jkim/.m2/repository/io/netty/netty-transport/4.1.48.Final/netty-transport-4.1.48.Final.jar:/Users/jkim/.m2/repository/io/netty/netty-codec/4.1.48.Final/netty-codec-4.1.48.Final.jar:/Users/jkim/.m2/repository/io/netty/netty-transport-native-epoll/4.1.48.Final/netty-transport-native-epoll-4.1.48.Final.jar:/Users/jkim/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.48.Final/netty-transport-native-unix-common-4.1.48.Final.jar:/Users/jkim/.m2/repository/commons-cli/commons-cli/1.4/commons-cli-1.4.jar:/Users/jkim/.m2/repository/org/apache/kafka/kafka_2.12/2.5.0/kafka_2.12-2.5.0-test.jar:/Users/jkim/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.1/junit-jupiter-api-5.6.1.jar:/Users/jkim/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/Users/jkim/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/jkim/.m2/repository/org/junit/platform/junit-platform-commons/1.6.1/junit-platform-commons-1.6.1.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/jkim"/>
+    <property name="user.language" value="ko"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/jre"/>
+    <property name="basedir" value="/Users/jkim/workspace/nerdybros/spring-kafka-beginner/consumer"/>
+    <property name="file.separator" value="/"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="idea.version2019.2.4" value="true"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="/Users/jkim/workspace/nerdybros/spring-kafka-beginner/consumer/target/surefire/surefirebooter8620012233052482250.jar"/>
+    <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/jre/classes"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="1.8.0_202-b08"/>
+    <property name="user.name" value="jkim"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="10.15.1"/>
+    <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/jre/lib/endorsed"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="US-ASCII"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="/Users/jkim/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/var/folders/01/_qswvymj1ybg31qyg0l296vr0000gn/T/"/>
+    <property name="java.version" value="1.8.0_202"/>
+    <property name="user.dir" value="/Users/jkim/workspace/nerdybros/spring-kafka-beginner/consumer"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="user.language.format" value="ko-Kore"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.library.path" value="/Users/jkim/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.202-b08"/>
+    <property name="java.ext.dirs" value="/Users/jkim/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+  </properties>
+  <testcase name="contextLoads" classname="io.nerdybros.springkafkabeginner.SpringKafkaBeginnerApplicationTests" time="0.002">
+    <error message="Failed to load ApplicationContext" type="java.lang.IllegalStateException">java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'eventRepository': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalArgumentException: Not a managed type: class io.nerdybros.springkafkabeginner.consumer.domain.MyEvent
+Caused by: java.lang.IllegalArgumentException: Not a managed type: class io.nerdybros.springkafkabeginner.consumer.domain.MyEvent
+</error>
+    <system-out><![CDATA[19:30:22.011 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+19:30:22.027 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+19:30:22.061 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [io.nerdybros.springkafkabeginner.SpringKafkaBeginnerApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+19:30:22.087 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [io.nerdybros.springkafkabeginner.SpringKafkaBeginnerApplicationTests], using SpringBootContextLoader
+19:30:22.093 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [io.nerdybros.springkafkabeginner.SpringKafkaBeginnerApplicationTests]: class path resource [io/nerdybros/springkafkabeginner/SpringKafkaBeginnerApplicationTests-context.xml] does not exist
+19:30:22.094 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [io.nerdybros.springkafkabeginner.SpringKafkaBeginnerApplicationTests]: class path resource [io/nerdybros/springkafkabeginner/SpringKafkaBeginnerApplicationTestsContext.groovy] does not exist
+19:30:22.094 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [io.nerdybros.springkafkabeginner.SpringKafkaBeginnerApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+19:30:22.095 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [io.nerdybros.springkafkabeginner.SpringKafkaBeginnerApplicationTests]: SpringKafkaBeginnerApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+19:30:22.144 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [io.nerdybros.springkafkabeginner.SpringKafkaBeginnerApplicationTests]
+19:30:22.238 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/jkim/workspace/nerdybros/spring-kafka-beginner/consumer/target/classes/io/nerdybros/springkafkabeginner/SpringKafkaBeginnerApplication.class]
+19:30:22.239 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration io.nerdybros.springkafkabeginner.SpringKafkaBeginnerApplication for test class io.nerdybros.springkafkabeginner.SpringKafkaBeginnerApplicationTests
+19:30:22.339 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [io.nerdybros.springkafkabeginner.SpringKafkaBeginnerApplicationTests]: using defaults.
+19:30:22.340 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+19:30:22.360 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7db12bb6, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@783a467b, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@272113c4, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@73e9cf30, org.springframework.test.context.support.DirtiesContextTestExecutionListener@771a660, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2d52216b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@242b836, org.springframework.test.context.event.EventPublishingTestExecutionListener@3f6f6701, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3527942a, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@942a29c, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1ed6388a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5a45133e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@534a5a98]
+19:30:22.363 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@3012646b testClass = SpringKafkaBeginnerApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@4a883b15 testClass = SpringKafkaBeginnerApplicationTests, locations = '{}', classes = '{class io.nerdybros.springkafkabeginner.SpringKafkaBeginnerApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@470f1802, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@3e92efc3, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@21de60b4, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@3d51f06e, org.springframework.boot.test.context.SpringBootTestArgs@1], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+19:30:22.399 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::  (v2.3.0.BUILD-SNAPSHOT)
+
+2020-04-25 19:30:22.694  INFO 21028 --- [           main] .n.s.SpringKafkaBeginnerApplicationTests : Starting SpringKafkaBeginnerApplicationTests on Jaesikui-MacBookPro.local with PID 21028 (started by jkim in /Users/jkim/workspace/nerdybros/spring-kafka-beginner/consumer)
+2020-04-25 19:30:22.695  INFO 21028 --- [           main] .n.s.SpringKafkaBeginnerApplicationTests : No active profile set, falling back to default profiles: default
+2020-04-25 19:30:23.232  INFO 21028 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-04-25 19:30:23.301  INFO 21028 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58ms. Found 1 JPA repository interfaces.
+2020-04-25 19:30:23.975  INFO 21028 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-25 19:30:23.988  INFO 21028 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-25 19:30:24.248  INFO 21028 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-25 19:30:24.326  INFO 21028 --- [         task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-04-25 19:30:24.404  INFO 21028 --- [         task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.13.Final
+2020-04-25 19:30:24.574  INFO 21028 --- [         task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-04-25 19:30:24.680  WARN 21028 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-25 19:30:24.719  INFO 21028 --- [         task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-04-25 19:30:24.985  INFO 21028 --- [         task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-04-25 19:30:24.993  INFO 21028 --- [         task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-04-25 19:30:25.639  INFO 21028 --- [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2020-04-25 19:30:25.822  INFO 21028 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = test-group-retry
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2020-04-25 19:30:25.938  INFO 21028 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.5.0
+2020-04-25 19:30:25.938  INFO 21028 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 66563e712b0b9f84
+2020-04-25 19:30:25.938  INFO 21028 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1587810625937
+2020-04-25 19:30:25.940  INFO 21028 --- [           main] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-test-group-retry-1, groupId=test-group-retry] Subscribed to topic(s): test-topic-retry
+2020-04-25 19:30:25.942  INFO 21028 --- [           main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
+2020-04-25 19:30:25.947  INFO 21028 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = test-group-stateful-retry
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2020-04-25 19:30:25.956  INFO 21028 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.5.0
+2020-04-25 19:30:25.956  INFO 21028 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 66563e712b0b9f84
+2020-04-25 19:30:25.956  INFO 21028 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1587810625956
+2020-04-25 19:30:25.957  INFO 21028 --- [           main] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-test-group-stateful-retry-2, groupId=test-group-stateful-retry] Subscribed to topic(s): test-topic-stateful-retry
+2020-04-25 19:30:25.958  INFO 21028 --- [           main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
+2020-04-25 19:30:25.960  INFO 21028 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = test-group-tx
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_committed
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2020-04-25 19:30:25.970  INFO 21028 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.5.0
+2020-04-25 19:30:25.970  INFO 21028 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 66563e712b0b9f84
+2020-04-25 19:30:25.970  INFO 21028 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1587810625970
+2020-04-25 19:30:25.971  INFO 21028 --- [           main] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-test-group-tx-3, groupId=test-group-tx] Subscribed to topic(s): test-topic-tx
+2020-04-25 19:30:25.971  INFO 21028 --- [           main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
+2020-04-25 19:30:25.972  INFO 21028 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = test-group-tx-2
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_committed
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2020-04-25 19:30:25.980  INFO 21028 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.5.0
+2020-04-25 19:30:25.981  INFO 21028 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 66563e712b0b9f84
+2020-04-25 19:30:25.981  INFO 21028 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1587810625980
+2020-04-25 19:30:25.982  INFO 21028 --- [           main] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-test-group-tx-2-4, groupId=test-group-tx-2] Subscribed to topic(s): test-topic-tx
+2020-04-25 19:30:25.982  INFO 21028 --- [           main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
+2020-04-25 19:30:25.984  INFO 21028 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = test-group-dlt
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2020-04-25 19:30:25.992  INFO 21028 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.5.0
+2020-04-25 19:30:25.992  INFO 21028 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 66563e712b0b9f84
+2020-04-25 19:30:25.992  INFO 21028 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1587810625992
+2020-04-25 19:30:25.992  INFO 21028 --- [           main] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-test-group-dlt-5, groupId=test-group-dlt] Subscribed to topic(s): test-topic
+2020-04-25 19:30:25.992  INFO 21028 --- [           main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
+2020-04-25 19:30:25.994  INFO 21028 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = test-group-filter
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2020-04-25 19:30:26.001  INFO 21028 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.5.0
+2020-04-25 19:30:26.001  INFO 21028 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 66563e712b0b9f84
+2020-04-25 19:30:26.001  INFO 21028 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1587810626001
+2020-04-25 19:30:26.001  INFO 21028 --- [           main] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-test-group-filter-6, groupId=test-group-filter] Subscribed to topic(s): test-topic
+2020-04-25 19:30:26.001  INFO 21028 --- [           main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
+2020-04-25 19:30:26.003  INFO 21028 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = test-group-partition
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2020-04-25 19:30:26.009  INFO 21028 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.5.0
+2020-04-25 19:30:26.009  INFO 21028 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 66563e712b0b9f84
+2020-04-25 19:30:26.009  INFO 21028 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1587810626009
+2020-04-25 19:30:26.010  INFO 21028 --- [           main] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-test-group-partition-7, groupId=test-group-partition] Subscribed to partition(s): test-topic-mp-0
+2020-04-25 19:30:26.013  INFO 21028 --- [           main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
+2020-04-25 19:30:26.015  INFO 21028 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = test-group-partition
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2020-04-25 19:30:26.017  INFO 21028 --- [ntainer#4-0-C-1] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-test-group-partition-7, groupId=test-group-partition] Seeking to offset 0 for partition test-topic-mp-0
+2020-04-25 19:30:26.024  INFO 21028 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.5.0
+2020-04-25 19:30:26.024  INFO 21028 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 66563e712b0b9f84
+2020-04-25 19:30:26.024  INFO 21028 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1587810626024
+2020-04-25 19:30:26.025  INFO 21028 --- [           main] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-test-group-partition-8, groupId=test-group-partition] Subscribed to partition(s): test-topic-mp-1, test-topic-mp-2
+2020-04-25 19:30:26.025  INFO 21028 --- [           main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
+2020-04-25 19:30:26.027  INFO 21028 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = test-group-ack
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2020-04-25 19:30:26.033  INFO 21028 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.5.0
+2020-04-25 19:30:26.033  INFO 21028 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 66563e712b0b9f84
+2020-04-25 19:30:26.034  INFO 21028 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1587810626033
+2020-04-25 19:30:26.034  INFO 21028 --- [           main] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-test-group-ack-9, groupId=test-group-ack] Subscribed to topic(s): test-topic
+2020-04-25 19:30:26.034  INFO 21028 --- [           main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
+2020-04-25 19:30:26.036  INFO 21028 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = test-group-simple
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2020-04-25 19:30:26.041  INFO 21028 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.5.0
+2020-04-25 19:30:26.041  INFO 21028 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 66563e712b0b9f84
+2020-04-25 19:30:26.041  INFO 21028 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1587810626041
+2020-04-25 19:30:26.042  INFO 21028 --- [           main] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-test-group-simple-10, groupId=test-group-simple] Subscribed to topic(s): test-topic
+2020-04-25 19:30:26.042  INFO 21028 --- [           main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
+2020-04-25 19:30:26.044  INFO 21028 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = test-group-tx-1
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_committed
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2020-04-25 19:30:26.050  INFO 21028 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.5.0
+2020-04-25 19:30:26.050  INFO 21028 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 66563e712b0b9f84
+2020-04-25 19:30:26.050  INFO 21028 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1587810626050
+2020-04-25 19:30:26.051  INFO 21028 --- [           main] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-test-group-tx-1-11, groupId=test-group-tx-1] Subscribed to topic(s): test-topic-tx
+2020-04-25 19:30:26.051  INFO 21028 --- [           main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
+2020-04-25 19:30:26.054  INFO 21028 --- [           main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories?
+2020-04-25 19:30:26.066  WARN 21028 --- [           main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'eventRepository': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalArgumentException: Not a managed type: class io.nerdybros.springkafkabeginner.consumer.domain.MyEvent
+2020-04-25 19:30:26.069  INFO 21028 --- [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-04-25 19:30:26.069  INFO 21028 --- [           main] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2020-04-25 19:30:26.071  INFO 21028 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-25 19:30:26.072  INFO 21028 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-04-25 19:30:26.074  INFO 21028 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-04-25 19:30:26.082  INFO 21028 --- [           main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-04-25 19:30:26.088 ERROR 21028 --- [           main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'eventRepository': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalArgumentException: Not a managed type: class io.nerdybros.springkafkabeginner.consumer.domain.MyEvent
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:178) ~[spring-beans-5.2.6.BUILD-SNAPSHOT.jar:5.2.6.BUILD-SNAPSHOT]
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.getObjectFromFactoryBean(FactoryBeanRegistrySupport.java:101) ~[spring-beans-5.2.6.BUILD-SNAPSHOT.jar:5.2.6.BUILD-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getObjectForBeanInstance(AbstractBeanFactory.java:1818) ~[spring-beans-5.2.6.BUILD-SNAPSHOT.jar:5.2.6.BUILD-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getObjectForBeanInstance(AbstractAutowireCapableBeanFactory.java:1266) ~[spring-beans-5.2.6.BUILD-SNAPSHOT.jar:5.2.6.BUILD-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:260) ~[spring-beans-5.2.6.BUILD-SNAPSHOT.jar:5.2.6.BUILD-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.6.BUILD-SNAPSHOT.jar:5.2.6.BUILD-SNAPSHOT]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:620) ~[spring-beans-5.2.6.BUILD-SNAPSHOT.jar:5.2.6.BUILD-SNAPSHOT]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:608) ~[spring-beans-5.2.6.BUILD-SNAPSHOT.jar:5.2.6.BUILD-SNAPSHOT]
+	at org.springframework.data.repository.config.DeferredRepositoryInitializationListener.onApplicationEvent(DeferredRepositoryInitializationListener.java:51) ~[spring-data-commons-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.data.repository.config.DeferredRepositoryInitializationListener.onApplicationEvent(DeferredRepositoryInitializationListener.java:36) ~[spring-data-commons-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172) ~[spring-context-5.2.6.BUILD-SNAPSHOT.jar:5.2.6.BUILD-SNAPSHOT]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165) ~[spring-context-5.2.6.BUILD-SNAPSHOT.jar:5.2.6.BUILD-SNAPSHOT]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139) ~[spring-context-5.2.6.BUILD-SNAPSHOT.jar:5.2.6.BUILD-SNAPSHOT]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:403) ~[spring-context-5.2.6.BUILD-SNAPSHOT.jar:5.2.6.BUILD-SNAPSHOT]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:360) ~[spring-context-5.2.6.BUILD-SNAPSHOT.jar:5.2.6.BUILD-SNAPSHOT]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:897) ~[spring-context-5.2.6.BUILD-SNAPSHOT.jar:5.2.6.BUILD-SNAPSHOT]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553) ~[spring-context-5.2.6.BUILD-SNAPSHOT.jar:5.2.6.BUILD-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) ~[spring-boot-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) ~[spring-boot-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120) [spring-boot-test-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) [spring-test-5.2.6.BUILD-SNAPSHOT.jar:5.2.6.BUILD-SNAPSHOT]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) [spring-test-5.2.6.BUILD-SNAPSHOT.jar:5.2.6.BUILD-SNAPSHOT]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123) [spring-test-5.2.6.BUILD-SNAPSHOT.jar:5.2.6.BUILD-SNAPSHOT]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) [spring-test-5.2.6.BUILD-SNAPSHOT.jar:5.2.6.BUILD-SNAPSHOT]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) [spring-test-5.2.6.BUILD-SNAPSHOT.jar:5.2.6.BUILD-SNAPSHOT]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244) [spring-test-5.2.6.BUILD-SNAPSHOT.jar:5.2.6.BUILD-SNAPSHOT]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:98) [spring-test-5.2.6.BUILD-SNAPSHOT.jar:5.2.6.BUILD-SNAPSHOT]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$5(ClassBasedTestDescriptor.java:341) [junit-jupiter-engine-5.6.1.jar:5.6.1]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:346) [junit-jupiter-engine-5.6.1.jar:5.6.1]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:341) [junit-jupiter-engine-5.6.1.jar:5.6.1]
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193) ~[na:1.8.0_202]
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175) ~[na:1.8.0_202]
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382) ~[na:1.8.0_202]
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481) ~[na:1.8.0_202]
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471) ~[na:1.8.0_202]
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312) ~[na:1.8.0_202]
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:743) ~[na:1.8.0_202]
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:742) ~[na:1.8.0_202]
+	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580) ~[na:1.8.0_202]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:340) [junit-jupiter-engine-5.6.1.jar:5.6.1]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:263) [junit-jupiter-engine-5.6.1.jar:5.6.1]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:256) [junit-jupiter-engine-5.6.1.jar:5.6.1]
+	at java.util.Optional.orElseGet(Optional.java:267) ~[na:1.8.0_202]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:255) [junit-jupiter-engine-5.6.1.jar:5.6.1]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:29) ~[junit-jupiter-engine-5.6.1.jar:5.6.1]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:108) ~[junit-jupiter-engine-5.6.1.jar:5.6.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:107) ~[junit-jupiter-engine-5.6.1.jar:5.6.1]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:71) ~[junit-jupiter-engine-5.6.1.jar:5.6.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:107) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:107) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:75) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at java.util.ArrayList.forEach(ArrayList.java:1257) ~[na:1.8.0_202]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at java.util.ArrayList.forEach(ArrayList.java:1257) ~[na:1.8.0_202]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150) ~[surefire-junit-platform-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124) ~[surefire-junit-platform-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384) ~[surefire-booter-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345) ~[surefire-booter-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) ~[surefire-booter-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) ~[surefire-booter-2.22.2.jar:2.22.2]
+Caused by: java.lang.IllegalArgumentException: Not a managed type: class io.nerdybros.springkafkabeginner.consumer.domain.MyEvent
+	at org.hibernate.metamodel.internal.MetamodelImpl.managedType(MetamodelImpl.java:582) ~[hibernate-core-5.4.13.Final.jar:5.4.13.Final]
+	at org.hibernate.metamodel.internal.MetamodelImpl.managedType(MetamodelImpl.java:85) ~[hibernate-core-5.4.13.Final.jar:5.4.13.Final]
+	at org.springframework.data.jpa.repository.support.JpaMetamodelEntityInformation.<init>(JpaMetamodelEntityInformation.java:74) ~[spring-data-jpa-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.data.jpa.repository.support.JpaEntityInformationSupport.getEntityInformation(JpaEntityInformationSupport.java:66) ~[spring-data-jpa-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getEntityInformation(JpaRepositoryFactory.java:229) ~[spring-data-jpa-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:179) ~[spring-data-jpa-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:162) ~[spring-data-jpa-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:72) ~[spring-data-jpa-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:309) ~[spring-data-commons-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:297) ~[spring-data-commons-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:212) ~[spring-data-commons-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.data.util.Lazy.get(Lazy.java:94) ~[spring-data-commons-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.getObject(RepositoryFactoryBeanSupport.java:244) ~[spring-data-commons-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.getObject(RepositoryFactoryBeanSupport.java:57) ~[spring-data-commons-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:171) ~[spring-beans-5.2.6.BUILD-SNAPSHOT.jar:5.2.6.BUILD-SNAPSHOT]
+	... 88 common frames omitted
+
+2020-04-25 19:30:26.091 ERROR 21028 --- [           main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@7db12bb6] to prepare test instance [io.nerdybros.springkafkabeginner.SpringKafkaBeginnerApplicationTests@56826a75]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132) ~[spring-test-5.2.6.BUILD-SNAPSHOT.jar:5.2.6.BUILD-SNAPSHOT]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123) ~[spring-test-5.2.6.BUILD-SNAPSHOT.jar:5.2.6.BUILD-SNAPSHOT]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) ~[spring-test-5.2.6.BUILD-SNAPSHOT.jar:5.2.6.BUILD-SNAPSHOT]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) ~[spring-test-5.2.6.BUILD-SNAPSHOT.jar:5.2.6.BUILD-SNAPSHOT]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244) ~[spring-test-5.2.6.BUILD-SNAPSHOT.jar:5.2.6.BUILD-SNAPSHOT]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:98) [spring-test-5.2.6.BUILD-SNAPSHOT.jar:5.2.6.BUILD-SNAPSHOT]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$5(ClassBasedTestDescriptor.java:341) [junit-jupiter-engine-5.6.1.jar:5.6.1]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:346) [junit-jupiter-engine-5.6.1.jar:5.6.1]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:341) [junit-jupiter-engine-5.6.1.jar:5.6.1]
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193) ~[na:1.8.0_202]
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175) ~[na:1.8.0_202]
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382) ~[na:1.8.0_202]
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481) ~[na:1.8.0_202]
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471) ~[na:1.8.0_202]
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312) ~[na:1.8.0_202]
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:743) ~[na:1.8.0_202]
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:742) ~[na:1.8.0_202]
+	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580) ~[na:1.8.0_202]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:340) [junit-jupiter-engine-5.6.1.jar:5.6.1]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:263) [junit-jupiter-engine-5.6.1.jar:5.6.1]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:256) [junit-jupiter-engine-5.6.1.jar:5.6.1]
+	at java.util.Optional.orElseGet(Optional.java:267) ~[na:1.8.0_202]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:255) [junit-jupiter-engine-5.6.1.jar:5.6.1]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:29) ~[junit-jupiter-engine-5.6.1.jar:5.6.1]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:108) ~[junit-jupiter-engine-5.6.1.jar:5.6.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:107) ~[junit-jupiter-engine-5.6.1.jar:5.6.1]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:71) ~[junit-jupiter-engine-5.6.1.jar:5.6.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:107) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:107) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:75) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at java.util.ArrayList.forEach(ArrayList.java:1257) ~[na:1.8.0_202]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at java.util.ArrayList.forEach(ArrayList.java:1257) ~[na:1.8.0_202]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51) ~[junit-platform-engine-1.6.1.jar:1.6.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150) ~[surefire-junit-platform-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124) ~[surefire-junit-platform-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384) ~[surefire-booter-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345) ~[surefire-booter-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) ~[surefire-booter-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) ~[surefire-booter-2.22.2.jar:2.22.2]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'eventRepository': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalArgumentException: Not a managed type: class io.nerdybros.springkafkabeginner.consumer.domain.MyEvent
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:178) ~[spring-beans-5.2.6.BUILD-SNAPSHOT.jar:5.2.6.BUILD-SNAPSHOT]
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.getObjectFromFactoryBean(FactoryBeanRegistrySupport.java:101) ~[spring-beans-5.2.6.BUILD-SNAPSHOT.jar:5.2.6.BUILD-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getObjectForBeanInstance(AbstractBeanFactory.java:1818) ~[spring-beans-5.2.6.BUILD-SNAPSHOT.jar:5.2.6.BUILD-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getObjectForBeanInstance(AbstractAutowireCapableBeanFactory.java:1266) ~[spring-beans-5.2.6.BUILD-SNAPSHOT.jar:5.2.6.BUILD-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:260) ~[spring-beans-5.2.6.BUILD-SNAPSHOT.jar:5.2.6.BUILD-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.6.BUILD-SNAPSHOT.jar:5.2.6.BUILD-SNAPSHOT]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:620) ~[spring-beans-5.2.6.BUILD-SNAPSHOT.jar:5.2.6.BUILD-SNAPSHOT]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:608) ~[spring-beans-5.2.6.BUILD-SNAPSHOT.jar:5.2.6.BUILD-SNAPSHOT]
+	at org.springframework.data.repository.config.DeferredRepositoryInitializationListener.onApplicationEvent(DeferredRepositoryInitializationListener.java:51) ~[spring-data-commons-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.data.repository.config.DeferredRepositoryInitializationListener.onApplicationEvent(DeferredRepositoryInitializationListener.java:36) ~[spring-data-commons-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172) ~[spring-context-5.2.6.BUILD-SNAPSHOT.jar:5.2.6.BUILD-SNAPSHOT]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165) ~[spring-context-5.2.6.BUILD-SNAPSHOT.jar:5.2.6.BUILD-SNAPSHOT]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139) ~[spring-context-5.2.6.BUILD-SNAPSHOT.jar:5.2.6.BUILD-SNAPSHOT]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:403) ~[spring-context-5.2.6.BUILD-SNAPSHOT.jar:5.2.6.BUILD-SNAPSHOT]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:360) ~[spring-context-5.2.6.BUILD-SNAPSHOT.jar:5.2.6.BUILD-SNAPSHOT]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:897) ~[spring-context-5.2.6.BUILD-SNAPSHOT.jar:5.2.6.BUILD-SNAPSHOT]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553) ~[spring-context-5.2.6.BUILD-SNAPSHOT.jar:5.2.6.BUILD-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) ~[spring-boot-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) ~[spring-boot-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120) ~[spring-boot-test-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.2.6.BUILD-SNAPSHOT.jar:5.2.6.BUILD-SNAPSHOT]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.2.6.BUILD-SNAPSHOT.jar:5.2.6.BUILD-SNAPSHOT]
+	... 65 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Not a managed type: class io.nerdybros.springkafkabeginner.consumer.domain.MyEvent
+	at org.hibernate.metamodel.internal.MetamodelImpl.managedType(MetamodelImpl.java:582) ~[hibernate-core-5.4.13.Final.jar:5.4.13.Final]
+	at org.hibernate.metamodel.internal.MetamodelImpl.managedType(MetamodelImpl.java:85) ~[hibernate-core-5.4.13.Final.jar:5.4.13.Final]
+	at org.springframework.data.jpa.repository.support.JpaMetamodelEntityInformation.<init>(JpaMetamodelEntityInformation.java:74) ~[spring-data-jpa-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.data.jpa.repository.support.JpaEntityInformationSupport.getEntityInformation(JpaEntityInformationSupport.java:66) ~[spring-data-jpa-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getEntityInformation(JpaRepositoryFactory.java:229) ~[spring-data-jpa-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:179) ~[spring-data-jpa-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:162) ~[spring-data-jpa-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:72) ~[spring-data-jpa-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:309) ~[spring-data-commons-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:297) ~[spring-data-commons-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:212) ~[spring-data-commons-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.data.util.Lazy.get(Lazy.java:94) ~[spring-data-commons-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.getObject(RepositoryFactoryBeanSupport.java:244) ~[spring-data-commons-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.getObject(RepositoryFactoryBeanSupport.java:57) ~[spring-data-commons-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:171) ~[spring-beans-5.2.6.BUILD-SNAPSHOT.jar:5.2.6.BUILD-SNAPSHOT]
+	... 88 common frames omitted
+
+]]></system-out>
+  </testcase>
+</testsuite>
