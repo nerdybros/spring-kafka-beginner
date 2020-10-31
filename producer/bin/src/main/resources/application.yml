@@ -1,5 +1,0 @@
-server:
- port: 8081
-kafka:
-  topic: test-topic
-  topic-mp: test-topic-mp

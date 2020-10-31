@@ -1,13 +1,9 @@
 package io.nerdybros.springkafkabeginner.producer;
 
-import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.RecordMetadata;
-import org.apache.kafka.common.serialization.StringSerializer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Bean;
-import org.springframework.kafka.core.DefaultKafkaProducerFactory;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.support.KafkaHeaders;
 import org.springframework.kafka.support.SendResult;
@@ -17,9 +13,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.concurrent.ListenableFuture;
 import org.springframework.util.concurrent.ListenableFutureCallback;
 
-import java.util.HashMap;
-import java.util.Map;
-
 @Component
 public class SimpleProducerCallback {
 
@@ -27,15 +20,15 @@ public class SimpleProducerCallback {
     private String topic;
 
     @Autowired
-    @Qualifier("simpleProducerCallbackKafkaTemplate")
+    @Qualifier("simpleProducerKafkaTemplate")
     private KafkaTemplate<String, String> kafkaTemplate;
 
     public void sendMessage(String message) {
 
         // Message<?> also supported
         Message<String> record = MessageBuilder.withPayload(message)
-                                    .setHeader(KafkaHeaders.TOPIC, topic)
-                                    .build();
+                .setHeader(KafkaHeaders.TOPIC, topic)
+                .build();
 
         ListenableFuture<SendResult<String, String>> future = kafkaTemplate.send(record);
         future.addCallback(new ListenableFutureCallback<SendResult<String, String>>() {
@@ -52,18 +45,18 @@ public class SimpleProducerCallback {
         });
     }
 
-    @Bean(name = "simpleProducerCallbackKafkaTemplate")
-    public KafkaTemplate<String, String> kafkaTemplate() {
-        // producer configuration
-        Map<String, Object> props = new HashMap<>();
-        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "127.0.0.1:9092");
-        props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
-        props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
-
-        // producer factory
-        DefaultKafkaProducerFactory<String, String> producerFactory = new DefaultKafkaProducerFactory<>(props);
-
-        // kafka template
-        return new KafkaTemplate<>(producerFactory);
-    }
+//    @Bean(name = "simpleProducerCallbackKafkaTemplate")
+//    public KafkaTemplate<String, String> kafkaTemplate() {
+//        // producer configuration
+//        Map<String, Object> props = new HashMap<>();
+//        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "127.0.0.1:9092");
+//        props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
+//        props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
+//
+//        // producer factory
+//        DefaultKafkaProducerFactory<String, String> producerFactory = new DefaultKafkaProducerFactory<>(props);
+//
+//        // kafka template
+//        return new KafkaTemplate<>(producerFactory);
+//    }
 }

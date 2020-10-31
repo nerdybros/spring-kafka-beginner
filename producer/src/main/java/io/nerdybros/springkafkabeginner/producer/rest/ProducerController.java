@@ -15,19 +15,19 @@ import java.util.List;
 public class ProducerController {
 
     @Autowired
-    @Qualifier("simpleProducer")
+//    @Qualifier("simpleProducer")
     private SimpleProducer producer;
 
     @Autowired
-    @Qualifier("simpleProducerCallback")
+//    @Qualifier("simpleProducerCallback")
     private SimpleProducerCallback producerCallback;
 
     @Autowired
-    @Qualifier("simplePartitionProducer")
+//    @Qualifier("simplePartitionProducer")
     private SimplePartitionProducer partitionProducer;
 
     @Autowired
-    @Qualifier("simpleTransactionalProducer")
+//    @Qualifier("simpleTransactionalProducer")
     private SimpleTransactionalProducer transactionalProducer;
 
     @PostMapping("/simple")
