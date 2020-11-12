@@ -14,7 +14,7 @@ import org.springframework.util.concurrent.ListenableFuture;
 import org.springframework.util.concurrent.ListenableFutureCallback;
 
 @Component
-public class SimpleProducerCallback {
+public class LessonTwoSimpleProducerCallback {
 
     @Value("${kafka.topic:sample-topic}")
     private String topic;
@@ -34,13 +34,13 @@ public class SimpleProducerCallback {
         future.addCallback(new ListenableFutureCallback<SendResult<String, String>>() {
             @Override
             public void onFailure(Throwable throwable) {
-                System.out.println("send error : " + throwable.getMessage()); // kill broker and let it fail
+                System.out.println("Callback - send error : " + throwable.getMessage()); // kill broker and let it fail
             }
 
             @Override
             public void onSuccess(SendResult<String, String> result) {
                 RecordMetadata recordMetadata = result.getRecordMetadata();
-                System.out.println("Sent to : " + recordMetadata.topic() + "-" + recordMetadata.partition() + "-" + recordMetadata.offset());
+                System.out.println("Callback - Sent to : " + recordMetadata.topic() + "-" + recordMetadata.partition() + "-" + recordMetadata.offset());
             }
         });
     }

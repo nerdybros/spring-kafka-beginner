@@ -14,7 +14,7 @@ import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Component;
 
 @Component
-public class SimpleProducer {
+public class LessonOneSimpleProducer {
 
     @Value("${kafka.topic:sample-topic}")
     private String topic;

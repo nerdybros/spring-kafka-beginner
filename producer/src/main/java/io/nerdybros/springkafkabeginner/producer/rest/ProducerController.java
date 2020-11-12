@@ -2,6 +2,7 @@ package io.nerdybros.springkafkabeginner.producer.rest;
 
 import java.util.List;
 
+import io.nerdybros.springkafkabeginner.producer.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -10,30 +11,29 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import io.nerdybros.springkafkabeginner.producer.SimplePartitionProducer;
-import io.nerdybros.springkafkabeginner.producer.SimpleProducer;
-import io.nerdybros.springkafkabeginner.producer.SimpleProducerCallback;
-import io.nerdybros.springkafkabeginner.producer.SimpleTransactionalProducer;
-
 @RestController
 @RequestMapping("producer")
 public class ProducerController {
 
 	@Autowired
-	@Qualifier("simpleProducer")
-	private SimpleProducer producer;
+	@Qualifier("lessonOneSimpleProducer")
+	private LessonOneSimpleProducer producer;
 
 	@Autowired
-	@Qualifier("simpleProducerCallback")
-	private SimpleProducerCallback producerCallback;
+	@Qualifier("lessonTwoSimpleProducerCallback")
+	private LessonTwoSimpleProducerCallback producerCallback;
 
 	@Autowired
-	@Qualifier("simplePartitionProducer")
-	private SimplePartitionProducer partitionProducer;
+	@Qualifier("lessonFourSimplePartitionProducer")
+	private LessonFourSimplePartitionProducer partitionProducer;
 
 	@Autowired
 	@Qualifier("simpleTransactionalProducer")
 	private SimpleTransactionalProducer transactionalProducer;
+
+	@Autowired
+	@Qualifier("lessonTwoSimpleProducerWithCustomProducerListener")
+	private LessonTwoSimpleProducerWithCustomProducerListener customProducerListenerProducer;
 
 	@PostMapping("/simple")
 	public void sendUsingSimpleProducer(@RequestBody String message) {
@@ -43,6 +43,11 @@ public class ProducerController {
 	@PostMapping("/simple-callback")
 	public void sendUsingSimpleProducerCallback(@RequestBody String message) {
 		this.producerCallback.sendMessage(message);
+	}
+
+	@PostMapping("/simple-custom-listener")
+	public void sendUsingcustomListenerProducer(@RequestBody String message) {
+		this.customProducerListenerProducer.sendMessage(message);
 	}
 
 	@PostMapping("/simple-partition")

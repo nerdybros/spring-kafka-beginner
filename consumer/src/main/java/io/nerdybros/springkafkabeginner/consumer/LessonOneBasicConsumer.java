@@ -18,7 +18,7 @@ import java.util.Map;
 @Component
 public class LessonOneBasicConsumer {
 
-    private final String groupId = "test-group-simple";
+    private final String groupId = "test-group-basic-consumer";
 
     @KafkaListener(topics = { "test-topic" }, containerFactory = "basicListenerContainerFactory", groupId = groupId)
     public void listen(String message) {
