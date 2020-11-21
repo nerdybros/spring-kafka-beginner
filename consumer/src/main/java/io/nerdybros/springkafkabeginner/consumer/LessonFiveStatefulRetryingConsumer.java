@@ -48,7 +48,10 @@ public class LessonFiveStatefulRetryingConsumer {
         fixedBackOff.setInterval(1000l);
         fixedBackOff.setMaxAttempts(3);
 
-        SeekToCurrentErrorHandler errorHandler = new SeekToCurrentErrorHandler(fixedBackOff);
+        SeekToCurrentErrorHandler errorHandler = new SeekToCurrentErrorHandler((consumerRecord, e) -> {
+            System.out.println("failed record: " + consumerRecord.toString() + " , reason: " + e.getMessage());
+            // customize what error handler should do here
+        }, fixedBackOff);
         factory.setErrorHandler(errorHandler);
         factory.setStatefulRetry(true);
 
